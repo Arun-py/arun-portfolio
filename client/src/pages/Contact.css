@@ -1,0 +1,256 @@
+.contact {
+  padding-top: 80px;
+  position: relative;
+  min-height: 100vh;
+}
+
+.contact-intro {
+  padding: 100px 0 60px;
+  text-align: center;
+}
+
+.contact-main {
+  padding: 60px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-form-container {
+  height: fit-content;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.contact-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-info-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: var(--transition);
+}
+
+.contact-info-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.6), 0 0 80px rgba(168, 85, 247, 0.4);
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.info-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-title {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.info-value {
+  font-size: 1.1rem;
+  color: #ffffff;
+  word-break: break-word;
+}
+
+.hobbies-section {
+  padding: 80px 0;
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.hobby-card {
+  padding: 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: var(--transition);
+}
+
+.hobby-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.6), 0 0 80px rgba(168, 85, 247, 0.4);
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.hobby-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.hobby-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.hobby-description {
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.philosophy-section {
+  padding: 80px 0 100px;
+}
+
+.philosophy-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.philosophy-card {
+  margin-top: 2rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(168, 85, 247, 0.1));
+  border: 2px solid var(--primary-color);
+  text-align: center;
+}
+
+.philosophy-quote {
+  font-size: 1.3rem;
+  color: #ffffff;
+  line-height: 1.8;
+  font-style: italic;
+  margin: 0;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-intro {
+    padding: 80px 0 40px;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .philosophy-card {
+    padding: 2rem;
+  }
+
+  .philosophy-quote {
+    font-size: 1.1rem;
+  }
+
+  .contact-info-card {
+    padding: 1.25rem;
+  }
+
+  .info-icon {
+    font-size: 1.5rem;
+  }
+
+  .info-value {
+    font-size: 1rem;
+  }
+}

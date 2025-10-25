@@ -1,0 +1,46 @@
+/* Video Background - Simple and Working */
+.video-background-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(10, 10, 15, 0.1) 0%,
+    rgba(5, 5, 8, 0.3) 100%
+  );
+  pointer-events: none;
+}
+
+/* Normal cursor - no effects */
+* {
+  cursor: auto !important;
+}
+
+a, button, input, textarea, select, [role="button"], .btn {
+  cursor: pointer !important;
+}

@@ -1,0 +1,243 @@
+.home {
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 120px 2rem 80px 6rem;
+  position: relative;
+}
+
+.hero-content {
+  text-align: left;
+  max-width: 900px;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-image-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 0 2rem 0;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid transparent;
+  background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box,
+              linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+  /* static profile photo with subtle hover */
+  transition: transform 0.25s var(--transition), box-shadow 0.25s var(--transition);
+}
+
+.profile-ring {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  /* remove continuous rotation - keep subtle glow */
+  box-shadow: 0 0 24px rgba(168,85,247,0.12);
+}
+/* Removed float/rotate animations for profile - using subtle hover interaction */
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #ffffff;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #ffffff;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  animation: fadeIn 1.4s ease-out;
+}
+
+.intro-section {
+  padding: 80px 0;
+}
+
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  color: #ffffff;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.highlights-section {
+  padding: 80px 0;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.highlight-card {
+  padding: 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.6), 0 0 80px rgba(168, 85, 247, 0.4);
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.highlight-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  user-select: none;
+}
+
+.highlight-value {
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.6;
+  user-select: none;
+}
+
+.mission-section {
+  padding: 80px 0 100px;
+}
+
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-card {
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+.mission-text {
+  font-size: 1.2rem;
+  color: #ffffff;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.mission-text:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 100px 0 60px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .profile-image-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .mission-card {
+    padding: 2rem;
+  }
+
+  .mission-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
